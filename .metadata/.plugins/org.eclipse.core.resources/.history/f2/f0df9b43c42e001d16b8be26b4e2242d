@@ -1,0 +1,23 @@
+
+public class RectangleClass {
+public static void main(String args[]) {
+		RectangleMain r;
+		
+		RectangleMain ary[];
+		int arySize = 5;
+		//int ary[];
+		ary = new RectangleMain[arySize];
+		
+		for (int i = 0; i < ary.length; i++) {
+			int l = (int)(Math.random() * 4 + 2);
+			int w = (int)(Math.random() * 4 + 2);
+			ary[i] = new RectangleMain(l, w);
+			for (int j = 0; j < ary.length; j++) {
+				System.out.println(ary[j].getP());
+			}
+			
+		}
+		
+	}
+
+}

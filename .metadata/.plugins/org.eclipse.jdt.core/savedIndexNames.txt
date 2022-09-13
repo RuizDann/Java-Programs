@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\d_rui\OneDrive - Loras College\Courses\CSC325-Java\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+747944937.index
+181772244.index
+4219279280.index
+935832260.index
+4257463236.index
