@@ -2,16 +2,23 @@
 public class Stack {
 	private int ary[];
 	private int top;
-	private int size;
-	
+	private int maxSize;
+
 	public void push(int e) {
-		if(isFull()) {
-			System.out.println("Stack is full.");
-			System.exit(-1);
+		int newAry[];
+		if(top == maxSize - 1) {
+			maxSize = maxSize * 2;
+			newAry = new int[maxSize];
+			for(int i = 0; i <= top; i++) {
+				newAry[i] = ary[i];
+			}
+			ary = newAry;
 		}
 		
 		System.out.println("Pushing: " + e);
-		ary[++top] = e;
+		
+		top++;
+		ary[top] = e;
 	}
 	
 	public int pop() {
@@ -43,13 +50,9 @@ public class Stack {
 		return top == -1;
 	}
 	
-	public boolean isFull() {
-		return top == size - 1;
-	}
-	
 	Stack(int capacity) {
 		ary = new int[capacity];
-		size = capacity;
+		maxSize = capacity;
 		top = -1;
 	}
 }
